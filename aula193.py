@@ -1,6 +1,7 @@
 from typing import List
 from time import sleep
 import os
+
 def main() -> None:
     print("="*60)
     print(f"{'DIGITE O COMANDO OU TAREFA':^60}")
