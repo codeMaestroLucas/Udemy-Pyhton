@@ -41,6 +41,8 @@ def main() -> None:
         else:
             print(f"\033[1;31mComando inválido!\033[m")
             continue
+    
+    salvar_log(lista_de_tarefas)
 
 def mostrar_tarefas(lista: List[str]) -> None:
     """Print formatado de todas as tarefas solicitadas.
@@ -52,9 +54,9 @@ def mostrar_tarefas(lista: List[str]) -> None:
     print(f"{'TAREFAS':^40}")
     print('-'*40)
     
-    c:int = 1
-    for tarefa in lista:
-        print(f'{c:>3}) {tarefa}')
+    
+    for c, tarefa in enumerate(lista):
+        print(f'{c + 1:>3}) {tarefa}')
         c += 1
     
     print('-'*40)
@@ -121,5 +123,22 @@ def refazer(lista: List[str], lista_desfazer: List[str]) -> List[str]:
     
     return lista, lista_desfazer
 
+def salvar_log(lista: List[str]) -> None:
+    """Função usada para salvar a lista de tarefas em um arquivo ao final do processo.
+        Será chamada após o término da main()
+
+    Args:
+        lista (List[str]): lista de tarefas do usuário
+    """
+    with open('log.txt', 'w', encoding='utf8') as arquivo:
+        for c, tarefa in enumerate(lista):
+            arquivo.write(f'{c + 1}){tarefa}\n')
+            
+def ler_log() -> None:
+    """Função usada para ler o arquivo de log.
+    """
+    with open('log.txt', 'r', encoding='utf8') as arquivo:
+        print(arquivo.read())
+    
 if __name__ == "__main__":
     main()
