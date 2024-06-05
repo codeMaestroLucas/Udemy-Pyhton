@@ -51,9 +51,9 @@ class Shopping_Cart:
             print(product.__dict__)
 
 
-p1 = Products('feijao', 53.86, 1)
-p2 = Products('arroz', 19.5, 1)
-p3 = Products('carne', 45, 10)
+p1 = Products('feijao', 13.86, 4)
+p2 = Products('arroz', 19.5, 2)
+p3 = Products('carne', 45, 3)
 
 products = [p1, p2, p3]
 

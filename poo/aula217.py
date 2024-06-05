@@ -1,3 +1,16 @@
+"""
+<<<Herança Simples>>>
+Ex.:
+Classes A, B, C
+
+C(B)  B(A)  A
+
+    A
+    |
+    B
+    |
+    C
+"""
 class A:
     att_a: str = 'attr a'
     
