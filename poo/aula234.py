@@ -16,7 +16,7 @@ try:
     
 except (MyError, AnotherError) as error:
     print(error.__class__.__name__)
-    print(error)
+    print(error.add_note("This problem occurred because...........(Only an note!)"))
     print("Something done to the error log.\n")
     print('*' *40)
     print()
