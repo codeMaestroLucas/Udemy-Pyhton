@@ -1,0 +1,66 @@
+###### Ignoring File ######
+index.html
+# Ignore only this file
+
+
+###### Ignoring Files ######
+*.ini
+.env
+.venv
+env
+venv
+*__pycache__*
+# This means that all the files ended with ".ini" will be ignored.
+
+
+###### Ignoring Folders ######
+alembic/
+# This means that all the files in this folder will be ignored.
+
+
+###### Expressions ######
+
+lucas*
+# All the files starting with "lucas" will be ignored
+
+
+###### REGEX ###### -> This site will create a REGEX Expression
+# Common expression
+# Created by https://www.toptal.com/developers/gitignore/api/c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=c++
+
+### C++ ###
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# End of https://www.toptal.com/developers/gitignore/api/c++
