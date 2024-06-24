@@ -4,11 +4,11 @@ Criar um sistema bancário (extremamente simples) que tem clientes, contas e
 um banco. A ideia é que o cliente tenha uma conta (poupança ou corrente) e que
 possa sacar/depositar nessa conta. Contas corrente tem um limite extra.
 Conta (ABC)
-    ContaCorrente
-    ContaPoupanca
+    ContaCorrente  OK
+    ContaPoupanca  OK
 Pessoa (ABC)
     Cliente
-        Clente -> Conta
+        Clente -> Conta  OK
 Banco
     Banco -> Cliente
     Banco -> Conta

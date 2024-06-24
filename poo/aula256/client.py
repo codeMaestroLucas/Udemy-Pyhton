@@ -1,9 +1,9 @@
-from account import Account
+from account import Account, Current_Account, Savings_Account
 from abc import ABC
 
 class Person(ABC):
     def __init__(self, name: str, age: int) -> None:
-        self._name = name
+        self._name = name.title().strip()
         self._age = age
     
     @property
@@ -25,10 +25,10 @@ class Person(ABC):
 class Client(Person):
     def __init__(self, name: str, age: int) -> None:
         super().__init__(name, age)
-        self._account = None
+        self._account: Account | None = None
         
     @property
-    def account(self) -> None:
+    def account(self) -> Account | None:
         return self._account
     
     @account.setter
@@ -36,7 +36,9 @@ class Client(Person):
         self._account = account
         
 if __name__ == '__main__':
+    c1 = Savings_Account(agency= 'agencia', acc_number= 123, limit= 100)
     p1 = Client('LUCAS', 123)
-    p1.name = 'Lucas'
     p1.age = 23
+    print(p1.__dict__)
+    p1.account = c1
     print(p1.__dict__)

@@ -7,7 +7,7 @@ class Account(ABC):
         self._balance = 0
     
     @property
-    def agency(self) -> None:
+    def agency(self) -> str | None:
         return self._agency
     
     @agency.setter
@@ -15,7 +15,7 @@ class Account(ABC):
         self._agency = agency
     
     @property
-    def acc_number(self) -> None:
+    def acc_number(self) -> int | None:
         return self._acc_number
     
     @acc_number.setter
@@ -50,15 +50,18 @@ class Current_Account(Account):
 
 
 class Savings_Account(Account):
-    def __init__(self, agency: str, acc_number: int) -> None:
+    def __init__(self, agency: str, acc_number: int, limit: float) -> None:
         super().__init__(agency, acc_number)
+        self._limit = limit
+
     
     def deposit(self, to_deposit: float) -> None:
         super().deposit(to_deposit)
     
     def withdraw(self, to_withdraw: float) -> None:
-        if self._balance - to_withdraw <= 0:
-            print(f"Cant withdraw more than \033[31m${self._balance:.2f}\033[m from your account.")
+        if self._balance - to_withdraw < self._limit:
+            print(f"Cant withdraw more than \033[31m${self._balance:.2f}\033[m\
+                from your account. Your limit is ${self._limit:.2f}")
             return
         
         self._balance -= abs(to_withdraw)
