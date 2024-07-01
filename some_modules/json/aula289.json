@@ -1,0 +1,17 @@
+{
+    "name": "lucas",
+    "age": 23,
+    "city": "brasilia",
+    "addresses": {
+        "home": "home st 123 n\u00ba10",
+        "job": "job st 456 n\u00ba20"
+    },
+    "friends": [
+        "joao",
+        "maria",
+        "pedro"
+    ],
+    "maried": false,
+    "cars": null,
+    "salary": 5000.0
+}
