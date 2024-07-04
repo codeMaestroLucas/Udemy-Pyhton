@@ -1,5 +1,5 @@
 # ENV VARS
-# Normally we use the envvars with capslok.
+# Normally we use the envvars with Uppercase.
 # Doc: https://pypi.org/project/python-dotenv/
 
 def main() -> None:
@@ -11,7 +11,8 @@ def main() -> None:
     load_dotenv() # Loads all the variables in the .env to be used in the code.
 
     # Creating an ENV VAR
-    os.environ['PASSWORD'] = 'IUDFIVBDIF74837439$#¨$%&'
+    os.environ['PASSWORD'] = 'IUDFIVBDIF74837439$#¨$%&' # This envvar wont be
+    # seen in the .env file, but will be available in the code.
     # Retrieving the ENV VAR
     # password = os.getenv('PASSWORD')
 
@@ -24,10 +25,6 @@ def main() -> None:
     
     # The file ".env-example" have all the names of the variables to be used in
     # the code. This file is commited to the version control.
-
-
-
-
 
 if __name__ == '__main__':
     main()
