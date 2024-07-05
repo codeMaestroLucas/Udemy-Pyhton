@@ -1,3 +1,5 @@
+# Using SQLite3
+
 def main() -> None:
     """Function used to run the main code."""
     from pathlib import Path
@@ -22,14 +24,14 @@ def main() -> None:
         """
     )
     
-    values: list = [
+    values: list[tuple] = [
         ('Lucas', 23, 10),
         ('Carlos', 8, 2)
         ]
     cmd = """ INSERT INTO students (name, age, grade) VALUES (?, ?, ?) ; """
     # for user in values:
     #     db.execute(cmd, user)
-    db.executemany(cmd, values)
+    db.executemany(cmd, values) # Gives an tuple of values
     
     
     # db.execute("""DELETE FROM students ;""") # Delete all data of that table

@@ -64,3 +64,4 @@ compose.yml
 !.vscode/*.code-snippets
 
 AppData/
+mysql_container/
