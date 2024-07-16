@@ -29,6 +29,8 @@ class HouseBuilder(ABC):
     
 
 class ConcreteHouseBuilder(HouseBuilder):
+    """Builder of an Concrete House.
+    """
     def __init__(self):
         self.house = House()
 
@@ -48,12 +50,14 @@ class ConcreteHouseBuilder(HouseBuilder):
         self.house.rooms = rooms
     
     
-    def get_house(self):
+    def get_house(self) -> House:
         return self.house
         
     
 
 class WoddenHouseBuilder(HouseBuilder):
+    """Builder of an Wodden House.
+    """
     def __init__(self):
         self.house = House()
 
@@ -73,5 +77,5 @@ class WoddenHouseBuilder(HouseBuilder):
         self.house.rooms = rooms
     
     
-    def get_house(self):
+    def get_house(self) -> House:
         return self.house
