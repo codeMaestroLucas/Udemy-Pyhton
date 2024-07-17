@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from prototype import Prototype
 
 class Shape(Prototype, ABC):
-    """Abstract class
+    """Abstract shape.
     """
     @abstractmethod
     def __init__(self, shape: str):

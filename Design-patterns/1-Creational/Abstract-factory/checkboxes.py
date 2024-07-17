@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Checkbox(ABC):
-    """Abstract class of checkboxes.
+    """Abstract checkboxes.
     """
     @abstractmethod
     def check(self):

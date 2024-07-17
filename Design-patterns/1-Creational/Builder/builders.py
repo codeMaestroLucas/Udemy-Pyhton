@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 from house import House
 
 class HouseBuilder(ABC):
+    def __init__(self):
+        self.house = House()
+    
     @abstractmethod
     def set_foundation(self, foundation: str):
         pass
@@ -23,17 +26,13 @@ class HouseBuilder(ABC):
         pass
 
 
-    @abstractmethod
-    def get_house(self):
-        pass
+    def get_house(self) -> House:
+        return self.house
     
 
 class ConcreteHouseBuilder(HouseBuilder):
     """Builder of an Concrete House.
     """
-    def __init__(self):
-        self.house = House()
-
     def set_foundation(self, foundation: str):
         self.house.foundation = foundation
         
@@ -48,19 +47,12 @@ class ConcreteHouseBuilder(HouseBuilder):
         
     def set_rooms(self, rooms: int):
         self.house.rooms = rooms
-    
-    
-    def get_house(self) -> House:
-        return self.house
         
     
 
 class WoddenHouseBuilder(HouseBuilder):
     """Builder of an Wodden House.
     """
-    def __init__(self):
-        self.house = House()
-
     def set_foundation(self, foundation: str):
         self.house.foundation = foundation
         
@@ -75,7 +67,3 @@ class WoddenHouseBuilder(HouseBuilder):
         
     def set_rooms(self, rooms: int):
         self.house.rooms = rooms
-    
-    
-    def get_house(self) -> House:
-        return self.house

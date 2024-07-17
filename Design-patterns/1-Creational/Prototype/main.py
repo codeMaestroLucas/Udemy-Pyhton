@@ -2,6 +2,8 @@ from shapes import Rectangle, Circle
 
 def main() -> None:
     """Function used to run the main code."""
+    print('='*60, f'\n{"ORIGINALS":^60}\n', '='*60)
+
     original_circle: Circle = Circle(15)
     original_rectangle: Rectangle = Rectangle(10, 20)
 

@@ -13,10 +13,8 @@ class Animal(ABC):
         pass
         
     def __repr__(self) -> str:
-        _repr: str = f"{self._name} is an {self._breed}."
-        return _repr
+        return f"{self._name} is an {self._breed}."
   
-    
     
 class Dog(Animal):
     """Dog class that will be instantieted.
@@ -29,7 +27,6 @@ class Dog(Animal):
         
     def say_hi(self) -> None:
         return f"{self._name}'s says Woof Woof!"
-
 
 
 class Cat(Animal):

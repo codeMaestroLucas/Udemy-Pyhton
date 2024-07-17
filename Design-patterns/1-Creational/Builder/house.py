@@ -29,7 +29,8 @@ class House(ABC):
             _list.append(f"{self.interior} interior")
             
         if self.rooms:
-            _list.append(f"{self.rooms} rooms")
+            _list.append(f"{self.rooms} room") if self.rooms == 1\
+                else _list.append(f"{self.rooms} rooms")
             
         # awnser += ", ".join(i for i in _list)
 

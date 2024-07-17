@@ -21,6 +21,12 @@ def main() -> None:
                                         "Rustic",
                                         2)
     print(wooden_house)
+    
+    x_house = director.build_house(foundation= 'Concrete',
+                                   roof= 'Stone',
+                                   interior= 'Ugly',
+                                   rooms= 1)
 
+    print(x_house)
 if __name__ == '__main__':
     main()

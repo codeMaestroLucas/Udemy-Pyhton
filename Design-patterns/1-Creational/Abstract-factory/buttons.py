@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Button(ABC):
-    """Abstract class of buttons.
+    """Abstract buttons.
     """
     @abstractmethod
     def click(self):

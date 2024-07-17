@@ -13,7 +13,7 @@ def main() -> None:
     print(dog)
     print(dog.say_hi())
 
-    print("-"*50, end='\n'*3)
+    print("-"*50, end='\n'*2)
 
 
     print(f'CAT)\n')
